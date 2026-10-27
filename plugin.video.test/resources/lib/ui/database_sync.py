@@ -218,7 +218,7 @@ class SyncDatabase:
                 if choice == 1:
                     control.setBool('first_time', False)
                     control.execute(
-                        'RunPlugin(plugin://plugin.video.otaku.testing/setup_wizard)')
+                        'RunPlugin(plugin://plugin.video.test/setup_wizard)')
                 elif choice == 0:
                     control.setBool('first_time', False)
 
@@ -262,7 +262,7 @@ class SyncDatabase:
             #         'No', 'Yes')
             #     if choice == 1:
             #         control.execute(
-            #             'RunPlugin(plugin://plugin.video.otaku.testing/setup_wizard)')
+            #             'RunPlugin(plugin://plugin.video.test/setup_wizard)')
             #     elif choice == 0:
             #         control.ok_dialog(
             #             f'{control.ADDON_NAME} - {control.lang(30415)}',

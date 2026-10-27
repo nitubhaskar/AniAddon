@@ -31,9 +31,9 @@ def copy_files(files):
             print(f"Skipping excluded file: {rel_path}")
             continue
 
-        # Normalize and drop "plugin.video.otaku.testing/"
+        # Normalize and drop "plugin.video.test/"
         parts = rel_path.split("/")
-        if parts[0] == "plugin.video.otaku.testing":
+        if parts[0] == "plugin.video.test":
             rel_path_fixed = os.path.join(*parts[1:])
         else:
             rel_path_fixed = os.path.join(*parts)

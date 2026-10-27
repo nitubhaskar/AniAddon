@@ -112,19 +112,19 @@ class Anichart(BaseWindow):
         # rest of your existing context‐menu code…
         if actionID == 117:
             context_menu_options = []
-            if control.getBool('context.otaku.testing.findrecommendations'):
+            if control.getBool('context.test.findrecommendations'):
                 context_menu_options.append("Find Recommendations")
-            if control.getBool('context.otaku.testing.findrelations'):
+            if control.getBool('context.test.findrelations'):
                 context_menu_options.append("Find Relations")
-            if control.getBool('context.otaku.testing.getwatchorder'):
+            if control.getBool('context.test.getwatchorder'):
                 context_menu_options.append("Get Watch Order")
-            if control.getBool('context.otaku.testing.viewreviews'):
+            if control.getBool('context.test.viewreviews'):
                 context_menu_options.append("View Reviews")
-            if control.getBool('context.otaku.testing.viewstatistics'):
+            if control.getBool('context.test.viewstatistics'):
                 context_menu_options.append("View Statistics")
-            if control.getBool('context.otaku.testing.deletefromdatabase'):
+            if control.getBool('context.test.deletefromdatabase'):
                 context_menu_options.append("Delete From Database")
-            if control.getBool('context.otaku.testing.watchlist'):
+            if control.getBool('context.test.watchlist'):
                 context_menu_options.append("WatchList Manager")
 
             context = control.context_menu(context_menu_options)

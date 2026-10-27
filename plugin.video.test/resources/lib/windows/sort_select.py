@@ -477,7 +477,7 @@ class SortSelect(BaseWindow):
             self.sort_options = dict(default_sort_options)
             self.save_settings()
             self.close()
-            control.execute('RunPlugin(plugin://plugin.video.otaku.testing/sort_select)')
+            control.execute('RunPlugin(plugin://plugin.video.test/sort_select)')
         elif control_id == 9004:  # set Sub Preset
             self.sort_options = dict(default_sub_options)
             yesno = control.yesno_dialog(control.ADDON_NAME, "Warning: This will change your audio and subtitle playback settings including your souce type and customization settings to prioritize content. Continue?")
@@ -492,7 +492,7 @@ class SortSelect(BaseWindow):
                 control.setBool('jz.dub', False)
                 self.save_settings()
                 self.close()
-                control.execute('RunPlugin(plugin://plugin.video.otaku.testing/sort_select)')
+                control.execute('RunPlugin(plugin://plugin.video.test/sort_select)')
                 control.sleep(1000)
                 control.ok_dialog(control.ADDON_NAME, 'Saved Sort Configuration')
         elif control_id == 9005:  # set Dub Preset
@@ -509,7 +509,7 @@ class SortSelect(BaseWindow):
                 control.setBool('jz.dub', True)
                 self.save_settings()
                 self.close()
-                control.execute('RunPlugin(plugin://plugin.video.otaku.testing/sort_select)')
+                control.execute('RunPlugin(plugin://plugin.video.test/sort_select)')
                 control.sleep(1000)
                 control.ok_dialog(control.ADDON_NAME, 'Saved Sort Configuration')
         elif control_id == 9006:  # set Multi-Audio Preset
@@ -519,7 +519,7 @@ class SortSelect(BaseWindow):
                 control.setInt('general.source', 1)
                 self.save_settings()
                 self.close()
-                control.execute('RunPlugin(plugin://plugin.video.otaku.testing/sort_select)')
+                control.execute('RunPlugin(plugin://plugin.video.test/sort_select)')
                 control.sleep(1000)
                 control.ok_dialog(control.ADDON_NAME, 'Saved Sort Configuration')
         elif control_id == 9007:  # set Multi-Sub Preset
@@ -529,7 +529,7 @@ class SortSelect(BaseWindow):
                 control.setInt('general.source', 1)
                 self.save_settings()
                 self.close()
-                control.execute('RunPlugin(plugin://plugin.video.otaku.testing/sort_select)')
+                control.execute('RunPlugin(plugin://plugin.video.test/sort_select)')
                 control.sleep(1000)
                 control.ok_dialog(control.ADDON_NAME, 'Saved Sort Configuration')
         elif control_id in [1111, 2222, 3333, 4444, 5555, 6666, 7777, 8888]:

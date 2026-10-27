@@ -7,21 +7,21 @@
 			<group id="1" label="30415">
 				<setting id="setup.wizard" type="action" label="30416" help="">
 					<level>0</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/setup_wizard?setting=true)</data>
+					<data>RunPlugin(plugin://plugin.video.test/setup_wizard?setting=true)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
 				</setting>
 				<setting id="clear_cache_wizard" type="action" label="30072" help="">
 					<level>1</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/clear_cache?setting=true)</data>
+					<data>RunPlugin(plugin://plugin.video.test/clear_cache?setting=true)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
 				</setting>
 				<setting id="rebuild_database_wizard" type="action" label="30075" help="">
 					<level>2</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/rebuild_database?setting=true)</data>
+					<data>RunPlugin(plugin://plugin.video.test/rebuild_database?setting=true)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
@@ -547,7 +547,7 @@
 				</setting>
 				<setting id="contentgenre.menu" type="action" label="30361" help="" parent="contentgenre.bool">
 					<level>0</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/update_genre_settings?setting=true)</data>
+					<data>RunPlugin(plugin://plugin.video.test/update_genre_settings?setting=true)</data>
 					<control type="button" format="action">
 						<close>false</close>
 					</control>
@@ -732,7 +732,7 @@
 			<group id="7" label="30281">
 				<setting id="download_manager_miscellaneous" type="action" label="30078" help="">
 					<level>0</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/download_manager?setting=true)</data>
+					<data>RunPlugin(plugin://plugin.video.test/download_manager?setting=true)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
@@ -1442,7 +1442,7 @@
 			<group id="1" label="30152" help="">
 				<setting id="source.filter" type="action" label="30447" help="">
 					<level>0</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/source_filter)</data>
+					<data>RunPlugin(plugin://plugin.video.test/source_filter)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
@@ -1766,7 +1766,7 @@
 			<group id="3" label="30156" help="">
 				<setting id="sort_select" type="action" label="30156" help="">
 					<level>0</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/sort_select?setting=true)</data>
+					<data>RunPlugin(plugin://plugin.video.test/sort_select?setting=true)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
@@ -1831,7 +1831,7 @@
 				</setting>
 				<setting id="realdebrid.auth_start" type="action" label="30195" help="">
 					<level>0</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/auth/realdebrid)</data>
+					<data>RunPlugin(plugin://plugin.video.test/auth/realdebrid)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
@@ -1841,7 +1841,7 @@
 				</setting>
 				<setting id="realdebrid.refresh.token" type="action" label="30196" help="">
 					<level>0</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/refresh/realdebrid)</data>
+					<data>RunPlugin(plugin://plugin.video.test/refresh/realdebrid)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
@@ -1892,7 +1892,7 @@
 				</setting>
 				<setting id="premiumize.auth_start" type="action" label="30213" help="">
 					<level>0</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/auth/premiumize)</data>
+					<data>RunPlugin(plugin://plugin.video.test/auth/premiumize)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
@@ -1902,7 +1902,7 @@
 				</setting>
 <!--				<setting id="premiumize.refresh.token" type="action" label="30133" help="">-->
 <!--					<level>0</level>-->
-<!--					<data>RunPlugin(plugin://plugin.video.otaku.testing/refresh/premiumize)</data>-->
+<!--					<data>RunPlugin(plugin://plugin.video.test/refresh/premiumize)</data>-->
 <!--					<control type="button" format="action">-->
 <!--						<close>true</close>-->
 <!--					</control>-->
@@ -1981,7 +1981,7 @@
 				</setting>
 				<setting id="alldebrid.auth_start" type="action" label="30201" help="">
 					<level>0</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/auth/alldebrid)</data>
+					<data>RunPlugin(plugin://plugin.video.test/auth/alldebrid)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
@@ -1991,7 +1991,7 @@
 				</setting>
 <!--				<setting id="alldebrid.refresh.token" type="action" label="30202" help="">-->
 <!--					<level>0</level>-->
-<!--					<data>RunPlugin(plugin://plugin.video.otaku.testing/refresh/alldebrid)</data>-->
+<!--					<data>RunPlugin(plugin://plugin.video.test/refresh/alldebrid)</data>-->
 <!--					<control type="button" format="action">-->
 <!--						<close>true</close>-->
 <!--					</control>-->
@@ -2042,7 +2042,7 @@
 				</setting>
 				<setting id="debridlink.auth_start" type="action" label="30207" help="">
 					<level>0</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/auth/debridlink)</data>
+					<data>RunPlugin(plugin://plugin.video.test/auth/debridlink)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
@@ -2052,7 +2052,7 @@
 				</setting>
 				<setting id="dl.refresh.token" type="action" label="30208" help="">
 					<level>0</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/refresh/debridlink)</data>
+					<data>RunPlugin(plugin://plugin.video.test/refresh/debridlink)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
@@ -2103,7 +2103,7 @@
 				</setting>
 				<setting id="torbox.auth_start" type="action" label="30367" help="">
 					<level>0</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/auth/torbox)</data>
+					<data>RunPlugin(plugin://plugin.video.test/auth/torbox)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
@@ -2113,7 +2113,7 @@
 				</setting>
 				<!-- <setting id="torbox.refresh.token" type="action" label="30368" help="">
 					<level>0</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/refresh/torbox)</data>
+					<data>RunPlugin(plugin://plugin.video.test/refresh/torbox)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
@@ -2164,7 +2164,7 @@
 				</setting>
 				<setting id="easydebrid.auth_start" type="action" label="30402" help="">
 					<level>0</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/auth/easydebrid)</data>
+					<data>RunPlugin(plugin://plugin.video.test/auth/easydebrid)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
@@ -2174,7 +2174,7 @@
 				</setting>
 				<!-- <setting id="easydebrid.refresh.token" type="action" label="30403" help="">
 					<level>0</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/refresh/easydebrid)</data>
+					<data>RunPlugin(plugin://plugin.video.test/refresh/easydebrid)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
@@ -2234,7 +2234,7 @@
 				</setting>
 				<setting id="easynews.auth_start" type="action" label="30481" help="">
 					<level>0</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/auth/easynews)</data>
+					<data>RunPlugin(plugin://plugin.video.test/auth/easynews)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
@@ -2341,7 +2341,7 @@
 				</setting>
 				<setting id="anilist.login" type="action" label="30230" help="">
 					<level>0</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/watchlist_login/anilist?auth_dialog=true)</data>
+					<data>RunPlugin(plugin://plugin.video.test/watchlist_login/anilist?auth_dialog=true)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
@@ -2430,7 +2430,7 @@
 				</setting>
 				<setting id="kitsu.login" type="action" label="30230" parent="kitsu.enabled" help="">
 					<level>0</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/watchlist_login/kitsu)</data>
+					<data>RunPlugin(plugin://plugin.video.test/watchlist_login/kitsu)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
@@ -2492,7 +2492,7 @@
 				</setting>
 				<setting id="mal.login" type="action" label="30230" help="">
 					<level>0</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/watchlist_login/mal?auth_dialog=true)</data>
+					<data>RunPlugin(plugin://plugin.video.test/watchlist_login/mal?auth_dialog=true)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
@@ -2555,7 +2555,7 @@
 				</setting>
 				<setting id="simkl.login" type="action" label="30230" parent="simkl.enabled" help="">
 					<level>0</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/watchlist_login/simkl)</data>
+					<data>RunPlugin(plugin://plugin.video.test/watchlist_login/simkl)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
@@ -2608,7 +2608,7 @@
 					<dependencies>
 						<dependency type="visible" setting="trakt.enabled">true</dependency>
 					</dependencies>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/trakt_settings?setting=true)</data>
+					<data>RunPlugin(plugin://plugin.video.test/trakt_settings?setting=true)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
@@ -2618,7 +2618,7 @@
 					<dependencies>
 						<dependency type="visible" setting="trakt.enabled">true</dependency>
 					</dependencies>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/trakt_script?setting=true)</data>
+					<data>RunPlugin(plugin://plugin.video.test/trakt_script?setting=true)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
@@ -3458,62 +3458,62 @@
 		<!-- Context Customization -->
 		<category id="Context Customization" label="30245" help="" >
 			<group id="1" label="30257" help="">
-				<setting id="context.otaku.testing.findrecommendations" type="boolean" label="30246" help="">
+				<setting id="context.test.findrecommendations" type="boolean" label="30246" help="">
 					<level>0</level>
 					<default>true</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="context.otaku.testing.findrelations" type="boolean" label="30247" help="">
+				<setting id="context.test.findrelations" type="boolean" label="30247" help="">
 					<level>0</level>
 					<default>true</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="context.otaku.testing.getwatchorder" type="boolean" label="30351" help="">
+				<setting id="context.test.getwatchorder" type="boolean" label="30351" help="">
 					<level>0</level>
 					<default>true</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="context.otaku.testing.viewreviews" type="boolean" label="30460" help="">
+				<setting id="context.test.viewreviews" type="boolean" label="30460" help="">
 					<level>0</level>
 					<default>true</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="context.otaku.testing.viewstatistics" type="boolean" label="30462" help="">
+				<setting id="context.test.viewstatistics" type="boolean" label="30462" help="">
 					<level>0</level>
 					<default>true</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="context.otaku.testing.rescrape" type="boolean" label="30248" help="">
+				<setting id="context.test.rescrape" type="boolean" label="30248" help="">
 					<level>0</level>
 					<default>true</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="context.otaku.testing.sourceselect" type="boolean" label="30249" help="">
+				<setting id="context.test.sourceselect" type="boolean" label="30249" help="">
 					<level>0</level>
 					<default>true</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="context.otaku.testing.logout" type="boolean" label="30250" help="">
+				<setting id="context.test.logout" type="boolean" label="30250" help="">
 					<level>0</level>
 					<default>true</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="context.otaku.testing.deletefromdatabase" type="boolean" label="30251" help="">
+				<setting id="context.test.deletefromdatabase" type="boolean" label="30251" help="">
 					<level>0</level>
 					<default>false</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="context.otaku.testing.watchlist" type="boolean" label="30252" help="">
+				<setting id="context.test.watchlist" type="boolean" label="30252" help="">
 					<level>0</level>
 					<default>true</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="context.otaku.testing.markedaswatched" type="boolean" label="30253" help="">
+				<setting id="context.test.markedaswatched" type="boolean" label="30253" help="">
 					<level>0</level>
 					<default>true</default>
 					<control type="toggle"/>
 				</setting>
-				<setting id="context.otaku.testing.fanartselect" type="boolean" label="30254" help="">
+				<setting id="context.test.fanartselect" type="boolean" label="30254" help="">
 					<level>0</level>
 					<default>false</default>
 					<control type="toggle"/>
@@ -3527,63 +3527,63 @@
 			<group id="1" label="30177" help="">
 				<setting id="change_log" type="action" label="30070" help="">
 					<level>1</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/change_log?setting=true)</data>
+					<data>RunPlugin(plugin://plugin.video.test/change_log?setting=true)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
 				</setting>
 				<setting id="clear_cache" type="action" label="30072" help="">
 					<level>1</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/clear_cache?setting=true)</data>
+					<data>RunPlugin(plugin://plugin.video.test/clear_cache?setting=true)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
 				</setting>
 				<setting id="clear_search_history" type="action" label="30073" help="">
 					<level>1</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/clear_search_history?setting=true)</data>
+					<data>RunPlugin(plugin://plugin.video.test/clear_search_history?setting=true)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
 				</setting>
 				<setting id="clear_watch_history" type="action" label="30074" help="">
 					<level>1</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/clear_watch_history?setting=true)</data>
+					<data>RunPlugin(plugin://plugin.video.test/clear_watch_history?setting=true)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
 				</setting>
 				<setting id="rebuild_database" type="action" label="30075" help="">
 					<level>1</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/rebuild_database?setting=true)</data>
+					<data>RunPlugin(plugin://plugin.video.test/rebuild_database?setting=true)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
 				</setting>
 				<setting id="wipe_addon_data" type="action" label="30076" help="">
 					<level>2</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/wipe_addon_data?setting=true)</data>
+					<data>RunPlugin(plugin://plugin.video.test/wipe_addon_data?setting=true)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
 				</setting>
 				<setting id="completed_sync" type="action" label="30077" help="">
 					<level>1</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/completed_sync?setting=true)</data>
+					<data>RunPlugin(plugin://plugin.video.test/completed_sync?setting=true)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
 				</setting>
 				<setting id="download_manager" type="action" label="30078" help="">
 					<level>2</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/download_manager?setting=true)</data>
+					<data>RunPlugin(plugin://plugin.video.test/download_manager?setting=true)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
 				</setting>
 				<setting id="clear_selected_fanart" type="action" label="30080" help="">
 					<level>1</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/clear_selected_fanart?setting=true)</data>
+					<data>RunPlugin(plugin://plugin.video.test/clear_selected_fanart?setting=true)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
@@ -3604,7 +3604,7 @@
 							<condition setting="inputstreamadaptive.enabled" operator="is">true</condition>
 						</dependency>
 					</dependencies>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/inputstreamadaptive?setting=true)</data>
+					<data>RunPlugin(plugin://plugin.video.test/inputstreamadaptive?setting=true)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
@@ -3616,7 +3616,7 @@
 							<condition setting="inputstreamadaptive.enabled" operator="is">true</condition>
 						</dependency>
 					</dependencies>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/inputstreamhelper?setting=true)</data>
+					<data>RunPlugin(plugin://plugin.video.test/inputstreamhelper?setting=true)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
@@ -3627,7 +3627,7 @@
 			<group id="3" label="30122" help="">
 				<setting id="reuselanguageinvoker.toggle" type="action" label="30123" help="">
 					<level>3</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/toggleLanguageInvoker?setting=true)</data>
+					<data>RunPlugin(plugin://plugin.video.test/toggleLanguageInvoker?setting=true)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
@@ -3649,7 +3649,7 @@
 				</setting>
 				<setting id="fs_inst" type="action" label="30350" help="" parent="fs_enable">
 					<level>0</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/solver_inst)</data>
+					<data>RunPlugin(plugin://plugin.video.test/solver_inst)</data>
 					<constraints>
 						<allowempty>true</allowempty>
 					</constraints>
@@ -3700,7 +3700,7 @@
 				</setting>
 				<setting id="ms_inst" type="action" label="30350" help="" parent="ms_enable">
 					<level>0</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/solver_inst)</data>
+					<data>RunPlugin(plugin://plugin.video.test/solver_inst)</data>
 					<constraints>
 						<allowempty>true</allowempty>
 					</constraints>
@@ -3729,12 +3729,12 @@
 			<group id="6" label="30428" help="">
 				<setting id="update_network_status" type="action" label="" help="">
 					<level>4</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/update_network_status)</data>
+					<data>RunPlugin(plugin://plugin.video.test/update_network_status)</data>
 					<visible>false</visible>
 				</setting>
 				<setting id="toggle_ipv6" type="action" label="30429" help="30430">
 					<level>1</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/toggle_ipv6?setting=true)</data>
+					<data>RunPlugin(plugin://plugin.video.test/toggle_ipv6?setting=true)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
@@ -3747,7 +3747,7 @@
 				</setting>
 				<setting id="toggle_http2" type="action" label="30431" help="30432">
 					<level>1</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/toggle_http2?setting=true)</data>
+					<data>RunPlugin(plugin://plugin.video.test/toggle_http2?setting=true)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
@@ -3764,14 +3764,14 @@
 			<group id="7" label="30125" help="">
 				<setting id="import_settings" type="action" label="30126" help="">
 					<level>3</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/import_settings?setting=true)</data>
+					<data>RunPlugin(plugin://plugin.video.test/import_settings?setting=true)</data>
 					<control type="button" format="action">
 						<close>true</close>
 					</control>
 				</setting>
 				<setting id="export_settings" type="action" label="30127" help="">
 					<level>3</level>
-					<data>RunPlugin(plugin://plugin.video.otaku.testing/export_settings?setting=true)</data>
+					<data>RunPlugin(plugin://plugin.video.test/export_settings?setting=true)</data>
 					<control type="button" format="action">
 						<close>false</close>
 					</control>

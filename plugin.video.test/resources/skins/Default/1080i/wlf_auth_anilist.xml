@@ -8,14 +8,14 @@
         </control>
 
         <control type="group">
-            <top>50</top>
+            <top>40</top>
             <left>60</left>
 
             <control type="label">
                 <height>100</height>
                 <width>1800</width>
                 <font>font12</font>
-                <label>$ADDON[plugin.video.otaku.testing 30092]</label>
+                <label>$ADDON[plugin.video.test 30094]</label>
             </control>
             <control type="image">
                 <left>1000</left>
@@ -30,7 +30,7 @@
                 <height>100</height>
                 <width>1800</width>
                 <font>font12</font>
-                <label>$ADDON[plugin.video.otaku.testing 30093]</label>
+                <label>$ADDON[plugin.video.test 30095]</label>
             </control>
             <control type="label">
                 <top>50</top>
@@ -41,7 +41,7 @@
                 <height>100</height>
                 <width>1800</width>
                 <font>font12</font>
-                <label>$ADDON[plugin.video.otaku.testing 30096]</label>
+                <label>$ADDON[plugin.video.test 30096]</label>
             </control>
         </control>
 
@@ -50,7 +50,7 @@
            <top>400</top>
            <left>40</left>
 
-            <control type="grouplist">
+           <control type="grouplist">
                 <onup>2000</onup>
                 <ondown>2000</ondown>
                 <top>200</top>
@@ -61,8 +61,20 @@
                     <width>1820</width>
                     <font>font12</font>
                     <textcolor>AAFFFFFF</textcolor>
-                    <label>[B]  - Auth url:[/B]</label>
-                    <hinttext>Enter auth url   </hinttext>
+                    <label>[B]  - Username:[/B]</label>
+                    <hinttext>Enter username   </hinttext>
+                    <disabledcolor>FF000000</disabledcolor>
+                  	<invalidcolor>FFFFFFFF</invalidcolor>
+                  	<pulseonselect>no</pulseonselect>
+                </control>
+                <control type="edit" id="1001">
+                    <left>-10</left>
+                    <height>100</height>
+                    <width>1820</width>
+                    <font>font12</font>
+                    <textcolor>AAFFFFFF</textcolor>
+                    <label>[B]  - Auth token:[/B]</label>
+                    <hinttext>Enter auth token   </hinttext>
                     <disabledcolor>FF000000</disabledcolor>
                   	<invalidcolor>FFFFFFFF</invalidcolor>
                   	<pulseonselect>no</pulseonselect>
@@ -71,15 +83,13 @@
        </control>
 
        <control type="group">
-           <top>500</top>
-           <left>40</left>
-
-           <control type="grouplist" id="2000">
+          <top>600</top>
+          <left>50</left>
+            <control type="grouplist" id="2000">
                 <onup>4000</onup>
                 <ondown>4000</ondown>
                 <top>200</top>
                 <height>75</height>
-               <defaultcontrol>1000</defaultcontrol>
                 <orientation>horizontal</orientation>
                 <control type="button" id="1002">
                     <width>300</width>

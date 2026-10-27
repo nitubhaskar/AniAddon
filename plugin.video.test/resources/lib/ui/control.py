@@ -66,7 +66,7 @@ kodi_version = float(xbmcaddon.Addon('xbmc.addon').getAddonInfo('version')[:4])
 
 _settings_cache = {}
 
-CONTEXT_ADDON_ID = 'context.otaku.testing'
+CONTEXT_ADDON_ID = 'context.test'
 CONTEXT_ADDON = xbmcaddon.Addon(CONTEXT_ADDON_ID)
 CONTEXT_ADDON_PATH = CONTEXT_ADDON.getAddonInfo('path')
 infoDB = os.path.join(CONTEXT_ADDON_PATH, 'info.db')
@@ -381,18 +381,18 @@ def clearSettingsCache():
 def process_context():
     """Cache context menu settings into window properties."""
     context_settings = [
-        "context.otaku.testing.findrecommendations",
-        "context.otaku.testing.findrelations",
-        "context.otaku.testing.getwatchorder",
-        "context.otaku.testing.viewreviews",
-        "context.otaku.testing.viewstatistics",
-        "context.otaku.testing.rescrape",
-        "context.otaku.testing.sourceselect",
-        "context.otaku.testing.logout",
-        "context.otaku.testing.deletefromdatabase",
-        "context.otaku.testing.watchlist",
-        "context.otaku.testing.markedaswatched",
-        "context.otaku.testing.fanartselect"
+        "context.test.findrecommendations",
+        "context.test.findrelations",
+        "context.test.getwatchorder",
+        "context.test.viewreviews",
+        "context.test.viewstatistics",
+        "context.test.rescrape",
+        "context.test.sourceselect",
+        "context.test.logout",
+        "context.test.deletefromdatabase",
+        "context.test.watchlist",
+        "context.test.markedaswatched",
+        "context.test.fanartselect"
     ]
     for s_id in context_settings:
         try:
@@ -626,7 +626,7 @@ def xbmc_add_dir(name, url, art, info, draw_cm, bulk_add, isfolder, isplayable, 
         fanart_selections = bulk_prefs.get('fanart_selections')
     else:
         artwork_fanart_enabled = getBool('artwork.fanart')
-        fanart_select_enabled = getBool('context.otaku.testing.fanartselect')
+        fanart_select_enabled = getBool('context.test.fanartselect')
         artwork_clearlogo_enabled = getBool('artwork.clearlogo')
         fanart_mal_ids = None
         fanart_selections = None
@@ -787,7 +787,7 @@ def _dir_list_item_worker(item, bulk_add, bulk_prefs):
 
 def bulk_dir_list(video_data, bulk_add=True):
     artwork_fanart_enabled = getBool('artwork.fanart')
-    fanart_select_enabled = getBool('context.otaku.testing.fanartselect')
+    fanart_select_enabled = getBool('context.test.fanartselect')
     bulk_prefs = {
         'artwork_fanart_enabled': artwork_fanart_enabled,
         'fanart_select_enabled': fanart_select_enabled,
@@ -848,7 +848,7 @@ def exit_(code):
 
 
 def is_addon_visible():
-    return xbmc.getInfoLabel('Container.PluginName') == 'plugin.video.otaku.testing'
+    return xbmc.getInfoLabel('Container.PluginName') == 'plugin.video.test'
 
 
 def abort_requested():

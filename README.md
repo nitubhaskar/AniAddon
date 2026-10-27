@@ -29,8 +29,8 @@ _Note: Some updates may require rebuilding the database._
 _Only use this if absolutely necessary. Future updates should be installed via the repository._
 
 1. **Install dependencies in order**:
-   - [Context Menu Addon](https://github.com/Goldenfreddy0703/repository.otaku.testing/raw/master/repo/zips/context.otaku.testing/context.otaku.testing-1.0.25.zip)
-   - [Otaku Testing Addon](https://github.com/Goldenfreddy0703/repository.otaku.testing/raw/master/repo/zips/plugin.video.otaku.testing/plugin.video.otaku.testing-5.1.68.zip)
+   - [Context Menu Addon](https://github.com/Goldenfreddy0703/repository.otaku.testing/raw/master/repo/zips/context.test/context.test-1.0.25.zip)
+   - [Otaku Testing Addon](https://github.com/Goldenfreddy0703/repository.otaku.testing/raw/master/repo/zips/plugin.video.test/plugin.video.test-5.1.68.zip)
 
 2. **Clear Cache & Rebuild Database**  
    _After each update, it is recommended to clear the cache and rebuild the database to ensure all changes take effect._

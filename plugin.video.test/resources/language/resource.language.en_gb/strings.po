@@ -1,6 +1,6 @@
 # Kodi Media Center language file
 # Addon Name: Otaku Testing
-# Addon id: plugin.video.otaku.testing
+# Addon id: plugin.video.test
 # Addon Provider: TeamOtaku
 # String ID Ranges:
 # 30000-30999: Plugin strings and settings
@@ -9,7 +9,7 @@
 # 33000-33999: Common addon strings
 msgid ""
 msgstr ""
-"Project-Id-Version: plugin.video.otaku.testing\n"
+"Project-Id-Version: plugin.video.test\n"
 "Report-Msgid-Bugs-To: TeamOtaku\n"
 "POT-Creation-Date: 2025-11-12 00:00+0000\n"
 "PO-Revision-Date: 2025-11-12 00:00+0000\n"
