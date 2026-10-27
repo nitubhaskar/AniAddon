@@ -5,7 +5,8 @@ from functools import partial
 
 from resources.lib.pages import (
     nyaa, animetosho, nekobt, torrentio, debrid_cloudfiles, easynews,
-    animepahe, anikoto, animixplay, hianime, watchnixtoons2, localfiles
+    animepahe, anikoto, animixplay, hianime, watchnixtoons2, localfiles,
+    nineanime
 )
 from resources.lib.ui import control, database
 from resources.lib.windows.get_sources_window import GetSources
@@ -36,6 +37,7 @@ _EMBED_MODULES = (
     # ('animekai', animekai, 'animekai', 'animekai', False),
     ('anikoto', anikoto, 'anikoto', 'anikoto', False),
     ('watchnixtoons2', watchnixtoons2, 'watchnixtoons2', None, True),
+    ('nineanime', nineanime, 'nineanime', None, False),
 )
 
 

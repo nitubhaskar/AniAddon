@@ -971,6 +971,11 @@
 					<default>true</default>
 					<control type="toggle"/>
 				</setting>
+				<setting id="provider.nineanime" type="boolean" label="9Anime (9anime.me.uk)" help="">
+					<level>0</level>
+					<default>true</default>
+					<control type="toggle"/>
+				</setting>
 			</group>
 		</category>
 
