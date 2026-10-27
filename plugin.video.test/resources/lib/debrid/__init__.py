@@ -57,6 +57,21 @@ class Debrid:
 
         cached_list = self.realdebridCached + self.alldebridCached + self.premiumizeCached + self.torboxCached + self.easydebridCached
         uncached_list = self.realdebridUnCached + self.premiumizeUnCached + self.alldebridUnCached + self.debridlinkUnCached + self.torboxUnCached
+
+        # If no debrid service is enabled, route torrents to Elementum for direct P2P streaming
+        if not any(enabled_debrids.values()) and control.getBool('torrent.elementum', True):
+            import urllib.parse
+            elementum_sources = []
+            for t in torrent_list:
+                item = deepcopy(t)
+                item['debrid_provider'] = 'Elementum'
+                item['type'] = 'torrent'
+                item['cached'] = True
+                if not item.get('magnet') and item.get('hash'):
+                    item['magnet'] = f"magnet:?xt=urn:btih:{item['hash']}&dn={urllib.parse.quote(item.get('name', ''))}"
+                elementum_sources.append(item)
+            return elementum_sources, []
+
         return cached_list, uncached_list
 
     def _get_imdb_and_season(self, mal_id, episode, media_type):

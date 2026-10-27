@@ -136,6 +136,16 @@ class Resolver(BaseWindow):
                     self.return_data['link'] = stream_link
                     break
 
+            if i.get('debrid_provider') == 'Elementum' or i.get('type') == 'elementum':
+                magnet = i.get('magnet') or f"magnet:?xt=urn:btih:{i['hash']}&dn={urllib.parse.quote(str(i.get('release_title', '')))}"
+                if control.condVisibility('System.HasAddon(plugin.video.elementum)'):
+                    stream_link = f"plugin://plugin.video.elementum/play?uri={urllib.parse.quote_plus(magnet)}"
+                    self.return_data['link'] = stream_link
+                    break
+                else:
+                    control.ok_dialog(control.ADDON_NAME, "Elementum addon is required for P2P torrent streaming.\nPlease install plugin.video.elementum from elementum.surge.sh")
+                    return None
+
             if i['type'] in ['torrent', 'cloud', 'hoster']:
                 if i['type'] == 'cloud' and i['debrid_provider'] == 'Alldebrid':
                     stream_link = i['hash']
@@ -170,8 +180,11 @@ class Resolver(BaseWindow):
                 }
                 break
 
-        if self.return_data.get('local'):
-            self.return_data['linkinfo'] = self.return_data
+        if self.return_data.get('local') or (self.return_data.get('link') and self.return_data['link'].startswith('plugin://')):
+            self.return_data['linkinfo'] = {
+                'url': self.return_data['link'],
+                'headers': {}
+            }
         else:
             self.return_data['linkinfo'] = self.prefetch_play_link(self.return_data['link'])
 

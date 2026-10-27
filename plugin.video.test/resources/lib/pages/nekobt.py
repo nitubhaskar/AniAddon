@@ -399,8 +399,8 @@ class Sources(BrowserBase):
             if match:
                 source['byte_size'] = source_utils.convert_to_bytes(float(f'{match.group(1)}.{match.group(2)}'), match.group(3))
 
+        source['magnet'] = res.get('magnet') or f"magnet:?xt=urn:btih:{res.get('hash', '')}"
         if not cached:
-            source['magnet'] = res['magnet']
             source['type'] += ' (uncached)'
 
         return source

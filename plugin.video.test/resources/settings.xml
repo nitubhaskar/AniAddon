@@ -755,6 +755,11 @@
 		<category id="Providers" label="30097" help="">
 			<!-- Torrents -->
 			<group id="1" label="30130" help="">
+				<setting id="torrent.elementum" type="boolean" label="Enable Elementum (Direct P2P Torrent Streaming)" help="">
+					<level>0</level>
+					<default>true</default>
+					<control type="toggle"/>
+				</setting>
 				<setting id="provider.nyaa" type="boolean" label="30233" help="">
 					<level>0</level>
 					<default>true</default>

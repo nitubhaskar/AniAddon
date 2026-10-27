@@ -179,8 +179,8 @@ class Sources(BrowserBase):
             except (ValueError, KeyError):
                 pass
 
+        source['magnet'] = res.get('magnet') or f"magnet:?xt=urn:btih:{res.get('hash', '')}"
         if not cached:
-            source['magnet'] = res['magnet']
             source['type'] += ' (uncached)'
 
         return source

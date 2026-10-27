@@ -105,10 +105,11 @@ class Sources(GetSources):
         ]
 
         debrid_on = any(enabled_debrids.values())
+        elementum_on = control.getBool('torrent.elementum', True)
         t_args = (query, mal_id, episode, status, media_type, rescrape, season, part)
 
         for provider in self.torrentProviders:
-            if debrid_on and control.getBool(f'provider.{provider}'):
+            if (debrid_on or elementum_on) and control.getBool(f'provider.{provider}'):
                 self.threads.append(self._start_worker(partial(self._torrent_sources_worker, provider, *t_args)))
             else:
                 self.remainingProviders.remove(provider)
