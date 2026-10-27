@@ -59,7 +59,7 @@ class Debrid:
         uncached_list = self.realdebridUnCached + self.premiumizeUnCached + self.alldebridUnCached + self.debridlinkUnCached + self.torboxUnCached
 
         # If no debrid service is enabled, route torrents to Elementum for direct P2P streaming
-        if not any(enabled_debrids.values()) and control.getBool('torrent.elementum', True):
+        if not any(enabled_debrids.values()) and control.getBool('torrent.elementum'):
             import urllib.parse
             elementum_sources = []
             for t in torrent_list:

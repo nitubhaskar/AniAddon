@@ -105,7 +105,7 @@ class Sources(GetSources):
         ]
 
         debrid_on = any(enabled_debrids.values())
-        elementum_on = control.getBool('torrent.elementum', True)
+        elementum_on = control.getBool('torrent.elementum')
         t_args = (query, mal_id, episode, status, media_type, rescrape, season, part)
 
         for provider in self.torrentProviders:
