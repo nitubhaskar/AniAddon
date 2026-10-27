@@ -178,7 +178,10 @@ class WatchlistPlayer(player):
             return
 
         while self.isPlaying() and not self.updated:
-            self.current_time = self.getTime()
+            try:
+                self.current_time = self.getTime()
+            except Exception:
+                break
             watched_percentage = (self.current_time / self.total_time) * 100 if self.total_time != 0 else 0
 
             if watched_percentage > self.update_percent:
@@ -274,7 +277,10 @@ class WatchlistPlayer(player):
 
         # Optimized playback monitoring with longer sleep intervals
         while self.isPlaying():
-            self.current_time = int(self.getTime())
+            try:
+                self.current_time = int(self.getTime())
+            except Exception:
+                break
             xbmc.sleep(10000)  # Reduced frequency from 5s to 10s
 
         # Cleanup
@@ -304,7 +310,10 @@ class WatchlistPlayer(player):
 
         # Optimized monitoring - check less frequently
         while self.isPlaying():
-            self.current_time = int(self.getTime())
+            try:
+                self.current_time = int(self.getTime())
+            except Exception:
+                break
             if self.current_time > intro_end:
                 break
             elif self.current_time > intro_start:
@@ -329,7 +338,10 @@ class WatchlistPlayer(player):
             return
 
         while self.isPlaying():
-            self.current_time = int(self.getTime())
+            try:
+                self.current_time = int(self.getTime())
+            except Exception:
+                break
             time_remaining = self.total_time - self.current_time
 
             # Handle auto skip outro (only if we have aniskip data)
