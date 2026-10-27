@@ -251,7 +251,7 @@ class Sources(GetSources):
 
     @staticmethod
     def sortSources(torrent_list, hoster_list, embed_list, cloud_files, local_files, media_type, duration):
-        all_list = torrent_list + hoster_list + embed_list + cloud_files + local_files
+        all_list = embed_list + torrent_list + hoster_list + cloud_files + local_files
         sortedList = [x for x in all_list if control.getInt('general.minResolution') <= x['quality'] <= control.getInt('general.maxResolution')]
 
         combined = torrent_list + hoster_list

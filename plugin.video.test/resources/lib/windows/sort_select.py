@@ -47,11 +47,11 @@ default_sort_options = {
     'sortmethod.7.reverse': False,
     'sortmethod.8.reverse': False,
     'sortmethod.9.reverse': False,
-    'source type.1': 0,  # files
-    'source type.2': 1,  # cloud
-    'source type.3': 2,  # torrent
-    'source type.4': 3,  # hoster
-    'source type.5': 4,  # embeds
+    'source type.1': 4,  # embeds
+    'source type.2': 2,  # torrent
+    'source type.3': 0,  # files
+    'source type.4': 1,  # cloud
+    'source type.5': 3,  # hoster
     'source type.6': 5,  # none
     'debrid provider.1': 0,  # Real-Debrid
     'debrid provider.2': 1,  # Premiumize
@@ -90,11 +90,11 @@ default_sub_options = {
     'sortmethod.7.reverse': False,
     'sortmethod.8.reverse': False,
     'sortmethod.9.reverse': False,
-    'source type.1': 0,  # files
-    'source type.2': 1,  # cloud
-    'source type.3': 2,  # torrent
-    'source type.4': 3,  # hoster
-    'source type.5': 4,  # embeds
+    'source type.1': 4,  # embeds
+    'source type.2': 2,  # torrent
+    'source type.3': 0,  # files
+    'source type.4': 1,  # cloud
+    'source type.5': 3,  # hoster
     'source type.6': 5,  # none
     'debrid provider.1': 0,  # Real-Debrid
     'debrid provider.2': 1,  # Premiumize
@@ -133,11 +133,11 @@ default_dub_options = {
     'sortmethod.7.reverse': False,
     'sortmethod.8.reverse': False,
     'sortmethod.9.reverse': False,
-    'source type.1': 0,  # files
-    'source type.2': 1,  # cloud
-    'source type.3': 2,  # torrent
-    'source type.4': 3,  # hoster
-    'source type.5': 4,  # embeds
+    'source type.1': 4,  # embeds
+    'source type.2': 2,  # torrent
+    'source type.3': 0,  # files
+    'source type.4': 1,  # cloud
+    'source type.5': 3,  # hoster
     'source type.6': 5,  # none
     'debrid provider.1': 0,  # Real-Debrid
     'debrid provider.2': 1,  # Premiumize
@@ -176,11 +176,11 @@ default_multi_audio_options = {
     'sortmethod.7.reverse': False,
     'sortmethod.8.reverse': False,
     'sortmethod.9.reverse': False,
-    'source type.1': 0,  # files
-    'source type.2': 1,  # cloud
-    'source type.3': 2,  # torrent
-    'source type.4': 3,  # hoster
-    'source type.5': 4,  # embeds
+    'source type.1': 4,  # embeds
+    'source type.2': 2,  # torrent
+    'source type.3': 0,  # files
+    'source type.4': 1,  # cloud
+    'source type.5': 3,  # hoster
     'source type.6': 5,  # none
     'debrid provider.1': 0,  # Real-Debrid
     'debrid provider.2': 1,  # Premiumize
@@ -219,11 +219,11 @@ default_multi_sub_options = {
     'sortmethod.7.reverse': False,
     'sortmethod.8.reverse': False,
     'sortmethod.9.reverse': False,
-    'source type.1': 0,  # files
-    'source type.2': 1,  # cloud
-    'source type.3': 2,  # torrent
-    'source type.4': 3,  # hoster
-    'source type.5': 4,  # embeds
+    'source type.1': 4,  # embeds
+    'source type.2': 2,  # torrent
+    'source type.3': 0,  # files
+    'source type.4': 1,  # cloud
+    'source type.5': 3,  # hoster
     'source type.6': 5,  # none
     'debrid provider.1': 0,  # Real-Debrid
     'debrid provider.2': 1,  # Premiumize
