@@ -178,25 +178,40 @@ class Anichart(BaseWindow):
         control.log(f"[ANICHART] Selected item id: {selected_item.get('id', 'N/A')}", "info")
         control.log(f"[ANICHART] Selected item route: {selected_item.get('route', 'N/A')}", "info")
 
-        # Extract MAL ID - try different fields for compatibility
-        anime_id = selected_item.get('mal_id') or selected_item.get('id') or selected_item.get('route')
+        # Extract MAL ID - ensure valid numeric ID or fallback to title search
+        raw_mal_id = selected_item.get('mal_id')
+        anime_id = None
+        if raw_mal_id and str(raw_mal_id).isdigit() and int(raw_mal_id) > 0:
+            anime_id = int(raw_mal_id)
+        elif selected_item.get('id') and str(selected_item.get('id')).isdigit():
+            anime_id = int(selected_item.get('id'))
+
+        # If MAL ID is not present in the calendar entry, search by title
+        if not anime_id:
+            search_title = selected_item.get('romaji') or selected_item.get('title') or selected_item.get('english')
+            if search_title:
+                control.log(f"[ANICHART] MAL ID missing for '{search_title}', searching MAL...", "info")
+                try:
+                    from resources.lib.OtakuBrowser import OtakuBrowser
+                    search_res = OtakuBrowser.get_mal_base_res(f"{control.MAL_API_BASE_URL}/anime", params={"q": search_title, "limit": 1})
+                    if search_res and search_res.get('data'):
+                        found_id = search_res['data'][0].get('mal_id')
+                        if found_id:
+                            anime_id = int(found_id)
+                            control.log(f"[ANICHART] Resolved MAL ID from title search: {anime_id}", "info")
+                except Exception as e:
+                    control.log(f"[ANICHART] Fallback title search failed: {e}", "warning")
+
+        if not anime_id:
+            control.log(f"Error: Could not resolve numeric MAL ID for: {selected_item.get('title')}", "warning")
+            control.notify(control.ADDON_NAME, "Anime details not yet available on MyAnimeList")
+            return
 
         # Fetch anime data to ensure it's cached
         from resources.lib.OtakuBrowser import OtakuBrowser
         OtakuBrowser().get_anime_data(anime_id)
 
         control.log(f"[ANICHART] Resolved anime_id: {anime_id}", "info")
-
-        if not anime_id:
-            control.log("Error: Could not find anime ID in selected item", "error")
-            return
-
-        # Ensure we have a numeric ID for the URL
-        try:
-            if not isinstance(anime_id, int):
-                anime_id = int(anime_id) if anime_id.isdigit() else anime_id
-        except (ValueError, AttributeError):
-            pass
 
         url = f"animes/{anime_id}/"
         self.anime_path = control.addon_url(url)

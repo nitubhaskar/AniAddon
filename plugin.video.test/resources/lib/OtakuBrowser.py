@@ -130,12 +130,26 @@ class OtakuBrowser(BrowserBase):
         Fetch full anime data from Jikan API by MAL ID.
         Returns the parsed JSON response or None on error.
         """
+        if not mal_id:
+            return None
+        try:
+            mal_id = int(mal_id)
+        except (ValueError, TypeError):
+            return None
+
         mal_res = database.get(self.get_mal_base_res, 24, f"{self._BASE_URL}/anime/{mal_id}")
+        if not mal_res or not isinstance(mal_res, dict):
+            return None
         data = mal_res.get('data', None)
-        mal_id = data['mal_id']
+        if not data or not isinstance(data, dict):
+            return None
+        mal_id = data.get('mal_id')
+        if not mal_id:
+            return None
         anilist_res = self.get_anilist_base_res([mal_id])
         get_meta.collect_meta([data])
-        get_meta.collect_meta(anilist_res)
+        if anilist_res:
+            get_meta.collect_meta(anilist_res)
         return self.database_update_show(data, anilist_res)
 
     def get_season_year(self, period='current'):
