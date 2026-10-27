@@ -31,9 +31,9 @@ def copy_files(files):
             print(f"Skipping excluded file: {rel_path}")
             continue
 
-        # Normalize and drop "plugin.video.test/"
+        # Normalize and drop "plugin.video.aniaddon/"
         parts = rel_path.split("/")
-        if parts[0] == "plugin.video.test":
+        if parts[0] == "plugin.video.aniaddon":
             rel_path_fixed = os.path.join(*parts[1:])
         else:
             rel_path_fixed = os.path.join(*parts)
