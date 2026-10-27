@@ -23,8 +23,8 @@ class Sources(BrowserBase):
         if media_type == 'movie':
             return self.get_movie_sources(query, mal_id)
 
-        episode_sources = self.get_episode_sources(query, mal_id, episode, season, part, status)
-        show_sources = self.get_show_sources(query, mal_id, episode, season, part)
+        episode_sources = self.get_episode_sources(query, mal_id, episode, season, part, status) or []
+        show_sources = self.get_show_sources(query, mal_id, episode, season, part) or []
         self.sources = episode_sources + show_sources
 
         if not self.sources and ':' in query:
@@ -104,7 +104,7 @@ class Sources(BrowserBase):
 
         def run_search(task):
             try:
-                sources = self.process_nyaa_episodes(self._BASE_URL, task['params'], mal_id, episode_zfill, season_zfill, part)
+                sources = self.process_nyaa_episodes(self._BASE_URL, task['params'], mal_id, episode_zfill, season_zfill, part) or []
                 control.log(f"Nyaa: {task['name']} search returned {len(sources)} sources")
                 return sources
             except Exception as e:
@@ -116,7 +116,8 @@ class Sources(BrowserBase):
         # Combine all results
         nyaa_sources = []
         for sources in all_search_results:
-            nyaa_sources.extend(sources)
+            if sources:
+                nyaa_sources.extend(sources)
 
         control.log(f"Nyaa: Episode search complete - returning {len(nyaa_sources)} total sources")
         return nyaa_sources
@@ -135,7 +136,7 @@ class Sources(BrowserBase):
             'o': 'desc'
         }
 
-        nyaa_sources = self.process_nyaa_episodes(self._BASE_URL, params, mal_id, episode_zfill, season_zfill, part)
+        nyaa_sources = self.process_nyaa_episodes(self._BASE_URL, params, mal_id, episode_zfill, season_zfill, part) or []
         control.log(f"Nyaa: Show search complete - found {len(nyaa_sources)} sources")
         return nyaa_sources
 
@@ -149,7 +150,7 @@ class Sources(BrowserBase):
             'o': 'desc'
         }
 
-        self.sources = self.process_nyaa_movie(self._BASE_URL, params, mal_id)
+        self.sources = self.process_nyaa_movie(self._BASE_URL, params, mal_id) or []
 
         # make sure no duplicate sources
         self.append_cache_uncached_noduplicates()
@@ -189,6 +190,7 @@ class Sources(BrowserBase):
                 mapfunc2 = partial(self.parse_nyaa_view, episode=episode_zfill, cached=False)
                 all_results += utils.parallel_process(uncashed_list, mapfunc2)
             return all_results
+        return []
 
     def process_nyaa_movie(self, url, params, mal_id):
         response = client.get(url, params=params)
@@ -232,6 +234,7 @@ class Sources(BrowserBase):
                 mapfunc2 = partial(self.parse_nyaa_view, episode=1, cached=False)
                 all_results += utils.parallel_process(uncashed_list, mapfunc2)
             return all_results
+        return []
 
     @staticmethod
     def parse_nyaa_view(res, episode, cached=True):

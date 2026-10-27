@@ -115,6 +115,8 @@ trakt_gmt_format = '%Y-%m-%dT%H:%M:%S.000Z'
 progressDialog = xbmcgui.DialogProgress()
 playList = xbmc.PlayList(xbmc.PLAYLIST_VIDEO)
 sleep = xbmc.sleep
+condVisibility = xbmc.getCondVisibility
+getCondVisibility = xbmc.getCondVisibility
 
 
 # ═══════════════════════════════════════════════════════════════════════════

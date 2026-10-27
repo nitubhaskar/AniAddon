@@ -138,7 +138,7 @@ class Resolver(BaseWindow):
 
             if i.get('debrid_provider') == 'Elementum' or i.get('type') == 'elementum':
                 magnet = i.get('magnet') or f"magnet:?xt=urn:btih:{i['hash']}&dn={urllib.parse.quote(str(i.get('release_title', '')))}"
-                if control.condVisibility('System.HasAddon(plugin.video.elementum)'):
+                if xbmc.getCondVisibility('System.HasAddon(plugin.video.elementum)'):
                     stream_link = f"plugin://plugin.video.elementum/play?uri={urllib.parse.quote_plus(magnet)}"
                     self.return_data['link'] = stream_link
                     break
