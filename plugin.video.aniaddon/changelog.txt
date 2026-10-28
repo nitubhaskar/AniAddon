@@ -1,3 +1,11 @@
+Changelog v6.0.0 (2026-10-28):
+- Rebranded to AniAddon with refreshed IDs and clean naming
+- Added 9Anime (9anime.me.uk) provider with direct MP4 and HLS m3u8 streaming
+- Added Elementum P2P direct torrent streaming support without Debrid requirements
+- Prioritized embed and direct stream sources over torrents in source sorting
+- Fixed player getTime exceptions on media stop
+- Fixed condVisibility UI helper alias and safe empty handling in Nyaa scraper
+
 Changelog v5.3.4 (2026-10-18):
 - AniAddon browser: fixed Airing Last, This, and Next season tabs (season query casing for the metadata API)
 - AnimePahe: fail soft when the search API returns no data; fixed invalid-JSON exception handling
