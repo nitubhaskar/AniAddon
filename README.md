@@ -19,7 +19,7 @@ You can install this addon via the repository to enable **automatic updates**.
 
 ### 📥 Install via Repository (Recommended)
 
-1. **Download repository**: [repository.aniaddon-1.0.zip](https://github.com/nitubhaskar/repository.aniaddon/blob/master/repository.aniaddon-1.0.zip?raw=true)
+1. **Download repository**: [repository.aniaddon-1.0.zip](https://github.com/nitubhaskar/AniAddon/releases/download/v6.0.0/repository.aniaddon-1.0.zip)
 2. **Install via Kodi File Manager**:
    - Add this source: `https://nitubhaskar.github.io/repository.aniaddon`
 3. Install the repository and get automatic updates.
