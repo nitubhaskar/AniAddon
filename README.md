@@ -29,8 +29,8 @@ You can install this addon via the repository to enable **automatic updates**.
 _Only use this if absolutely necessary. Future updates should be installed via the repository._
 
 1. **Install dependencies in order**:
-   - [Context Menu Addon](https://github.com/nitubhaskar/repository.aniaddon/raw/master/repo/zips/context.aniaddon/context.aniaddon-6.0.0.zip)
-   - [AniAddon Addon](https://github.com/nitubhaskar/repository.aniaddon/raw/master/repo/zips/plugin.video.aniaddon/plugin.video.aniaddon-6.0.0.zip)
+   - [Context Menu Addon](https://github.com/nitubhaskar/AniAddon/releases/download/v6.0.0/context.aniaddon.zip)
+   - [AniAddon Addon](https://github.com/nitubhaskar/AniAddon/releases/download/v6.0.0/plugin.video.aniaddon.zip)
 
 2. **Clear Cache & Rebuild Database**  
    _After each update, it is recommended to clear the cache and rebuild the database to ensure all changes take effect._
